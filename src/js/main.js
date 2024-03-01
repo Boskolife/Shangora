@@ -1,3 +1,4 @@
+
 if (window.innerWidth < 1024) {
   openModal();
 }
@@ -5,7 +6,6 @@ if (window.innerWidth > 1024) {
   findHref();
 }
 burgerMenu();
-new WOW().init();
 
 function openModal() {
   const itemClick = document.querySelector('.link');
@@ -99,3 +99,5 @@ function changeBackground() {
     bgWhite.classList.remove('change_white');
   });
 }
+
+new WOW().init();
