@@ -99,5 +99,3 @@ function changeBackground() {
     bgWhite.classList.remove('change_white');
   });
 }
-
-// new wow().init();
