@@ -100,4 +100,4 @@ function changeBackground() {
   });
 }
 
-new WOW().init();
+// new wow().init();
