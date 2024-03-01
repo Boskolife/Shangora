@@ -1,0 +1,993 @@
+html {
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #000;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $white;
+        border-radius: 5px;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.body_lock {
+    overflow: hidden;
+}
+
+.font {
+    font-family: "TRJN DaVinci Italic";
+    font-weight: 400;
+}
+
+.main {
+    padding-top: 25px;
+    @include adaptive-value("padding-bottom", 280, 120, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+        z-index: 1;
+
+        @include media('<desktop') {
+            display: none;
+        }
+    }
+
+    @include media('<desktop') {
+        height: auto;
+    }
+
+    .container,
+    .content_top {
+        height: 100%;
+    }
+
+    .container {
+        position: relative;
+        padding: 0;
+    }
+
+    .content_top {
+        position: relative;
+
+        @include media('<desktop') {
+            height: auto;
+            margin-bottom: 85px;
+            padding-top: 120px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+                z-index: 1;
+            }
+        }
+    }
+
+    .main_img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+            z-index: 1;
+
+            @include media('<desktop') {
+                display: none;
+            }
+        }
+
+
+        @include media('>fullscreen') {
+            width: 80%;
+        }
+
+        @include media('<desktop') {
+            position: static;
+        }
+
+        @include media('<phone') {
+            display: none;
+        }
+    }
+
+    .main_img_phone {
+        display: none;
+
+        @include media('<phone') {
+            display: block;
+        }
+    }
+
+    .top_text_wrap {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        margin-right: 15px;
+
+        @include media('>fullscreen') {
+            top: 10%;
+        }
+
+        @include media('<tablet') {
+            top: 10%;
+        }
+    }
+
+    .top_text {
+        color: $white;
+        text-align: right;
+        font-family: "Neue Haas Grotesk Display Pro";
+        @include adaptive-value("font-size", 24, 20, 1);
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include media('>fullscreen') {
+            font-size: 3vw;
+        }
+    }
+
+    .stroke_3 {
+        margin-right: 130px
+    }
+
+    .main_title {
+        color: $white;
+        font-family: "TRJN DaVinci Italic";
+        @include adaptive-value("font-size", 300, 82, 1);
+        position: absolute;
+        bottom: 45%;
+        font-weight: 400;
+        left: 50%;
+        transform: translate(-50%);
+
+        @include media('>fullscreen') {
+            font-size: 20vw;
+            bottom: 55%;
+        }
+
+        @include media('<desktop') {
+            bottom: 1%;
+            z-index: 2;
+        }
+
+    }
+
+    .content_bot {
+        padding: 0 15px;
+
+        @include media('<desktop') {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+    }
+
+    .bot_text_wrap {
+        position: absolute;
+        z-index: 2;
+
+        @include media('<desktop') {
+            position: static;
+            text-align: center;
+        }
+
+        .text_title {
+            color: $white;
+            font-family: "TRJN DaVinci Italic";
+            @include adaptive-value("font-size", 64, 46, 1);
+            margin-bottom: 15px;
+        }
+
+        .text {
+            color: $white;
+            font-family: "Neue Haas Grotesk Display Pro";
+            @include adaptive-value("font-size", 20, 16, 1);
+            font-weight: 500;
+            line-height: 120%;
+            text-transform: uppercase;
+
+            @include media('>fullscreen') {
+                font-size: 2vw;
+            }
+        }
+    }
+
+    .bot_text_1 {
+        @include adaptive-value("bottom", 270, 0, 1);
+        left: 15px;
+        max-width: 325px;
+        width: 100%;
+
+        @include media('>fullscreen') {
+            max-width: 33%;
+            bottom: 12%;
+        }
+    }
+
+    .bot_text_2 {
+        @include adaptive-value("bottom", 230, 0, 1);
+        right: 15px;
+        max-width: 325px;
+        width: 100%;
+
+        @include media('>fullscreen') {
+            max-width: 33%;
+            bottom: 20%;
+        }
+    }
+
+    .bot_text_3 {
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 460px;
+        width: 100%;
+
+        @include media('>fullscreen') {
+            max-width: 33%;
+        }
+
+        @include media('<desktop') {
+            transform: translate(0)
+        }
+    }
+}
+
+.catalogue_slider {
+    position: relative;
+    @include adaptive-value("padding-top", 140, 0, 1);
+    overflow: hidden;
+    text-align: center;
+
+    .top_shadow {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 245px;
+        z-index: 1;
+        transition: all .3s ease 0s;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    .bottom_shadow {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 215px;
+        z-index: 1;
+        transition: all .3s ease 0s;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    .change_shadow_bot {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        transition: all .3s ease 0s;
+    }
+
+    .change_shadow_top {
+        transition: all .3s ease 0s;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    }
+
+    .catalogue_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease 0s;
+        z-index: -1;
+
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    .change_black {
+        opacity: 0;
+        transition: all .3s ease 0s;
+    }
+
+    .catalogue_bg_white {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all .3s ease 0s;
+    }
+
+    .change_white {
+        opacity: 1;
+        transition: all .3s ease 0s;
+    }
+
+    .keen-slider {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .keen-slider__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .card {
+        @include adaptive-value("height", 558, 468, 1);
+        background-color: $white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        transition: all .5s ease 0s;
+        position: relative;
+        width: 392px;
+        text-align: start;
+
+
+        &:hover {
+            background-color: $black;
+            transition: all .5s ease 0s;
+
+            .card_title,
+            .category,
+            .price {
+                color: $white;
+                transition: all .5s ease 0s;
+            }
+        }
+    }
+
+    .card_img {
+        @include adaptive-value("height", 390, 330, 1);
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .permalink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .card_title {
+        color: $black;
+        font-family: "Neue Haas Grotesk Display Pro";
+        @include adaptive-value("font-size", 24, 20, 1);
+        font-weight: 600;
+        text-transform: uppercase;
+        @include adaptive-value("margin-bottom", 80, 60, 1);
+        flex: 1 1 auto;
+        transition: all .5s ease 0s;
+    }
+
+    .card_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .category,
+    .price {
+        color: $black;
+        font-family: "Neue Haas Grotesk Display Pro";
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all .5s ease 0s;
+    }
+
+    .category {
+        text-decoration: underline
+    }
+
+    .catalogue_btn {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 auto;
+        transition: all .3s ease 0s;
+        cursor: pointer;
+        width: max-content;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -35%;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #FFF;
+            border-radius: 50%;
+            animation: pulse 3s linear infinite;
+            width: 274px;
+            height: 244px;
+            transition: all .3s ease 0s;
+
+            @include media('>fullscreen') {
+                width: 17vw;
+                height: 17vw;
+            }
+        }
+
+
+        &:hover {
+
+            &::before {
+                background-color: $white;
+                transition: all .3s ease 0s;
+            }
+
+            span {
+                color: $black;
+                transition: all .3s ease 0s;
+            }
+        }
+
+        span {
+            color: $white;
+            font-family: "Neue Haas Grotesk Display Pro";
+            @include adaptive-value("font-size", 20, 16, 1);
+            font-weight: 600;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            margin-top: 65px;
+            transition: all .3s ease 0s;
+            position: relative;
+            z-index: 1;
+
+            @include media('>fullscreen') {
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    .active_btn {
+        transform: scale(3);
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.3);
+        }
+    }
+}
+
+.shop {
+    position: relative;
+    @include adaptive-value("padding-top", 115, 50, 1);
+    @include adaptive-value("padding-bottom", 140, 70, 1);
+
+    .container {
+        overflow: hidden;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 245px;
+        z-index: 2;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    .shop_img {
+        position: absolute;
+        top: -25px;
+        right: 0;
+        z-index: -1;
+        max-width: 1210px;
+        width: 100%;
+        height: auto;
+
+        @include media('>fullscreen') {
+            max-width: 65%;
+        }
+
+        @include media('<tablet') {
+            display: none;
+        }
+    }
+
+    .shop_img_phone {
+        display: none;
+
+        @include media('<tablet') {
+            display: block;
+            margin-top: -230px;
+        }
+    }
+
+    .title_wrap {
+        max-width: 920px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 60px;
+        animation-duration: 2s;
+        overflow: hidden;
+
+        @include media('>fullscreen') {
+            max-width: 65%;
+        }
+    }
+
+    .title {
+        color: $white;
+        font-family: "Neue Haas Grotesk Display Pro";
+        @include adaptive-value("font-size", 74, 52, 1);
+        font-weight: 600;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        @include media('>fullscreen') {
+            font-size: 5vw;
+        }
+    }
+
+    .title_2 {
+        max-width: 785px;
+        margin: 0 0 0 auto;
+
+        @include media('<tablet') {
+            text-indent: 150px;
+        }
+
+        @include media('>fullscreen') {
+            max-width: 100%;
+            margin-left: 150px
+        }
+    }
+
+    .shop_btn {
+        @include adaptive-value("width", 260, 225, 1);
+        @include adaptive-value("height", 260, 225, 1);
+        border-radius: 50%;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        text-align: center;
+        font-family: "Neue Haas Grotesk Display Pro";
+        @include adaptive-value("font-size", 20, 16, 1);
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all .3s ease 0s;
+
+        @include media('>fullscreen') {
+            font-size: 2vw;
+            width: 15vw;
+            height: 15vw;
+        }
+
+        &:hover {
+            background-color: $white;
+            transition: all .3s ease 0s;
+            color: $black;
+        }
+    }
+}
+
+.contact {
+    @include adaptive-value("padding-top", 70, 35, 1);
+    @include adaptive-value("padding-bottom", 265, 120, 1);
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .form_wrap {
+        width: 43%;
+
+        @include media('<desktop') {
+            width: 100%;
+        }
+    }
+
+    .form_title {
+        color: $white;
+        font-family: "Neue Haas Grotesk Display Pro";
+        @include adaptive-value("font-size", 64, 32, 1);
+        font-weight: 600;
+        text-transform: uppercase;
+        @include adaptive-value("margin-bottom", 50, 30, 1);
+
+        @include media('>fullscreen') {
+            font-size: 5vw;
+        }
+    }
+
+    .input_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+        @include adaptive-value("margin-bottom", 50, 30, 1);
+    }
+
+    .name {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "Neue Haas Grotesk Display Pro";
+        font-size: 14px;
+        font-weight: 500;
+
+        @include media('>fullscreen') {
+            font-size: 1.5vw;
+        }
+    }
+
+    .input_data {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #646A5E;
+        color: $white;
+        font-family: "Neue Haas Grotesk Display Pro";
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 15px;
+        transition: all .3s ease 0s;
+
+        @include media('>fullscreen') {
+            font-size: 2vw;
+        }
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        &:focus {
+            border-bottom: 1px solid $white;
+            transition: all .3s ease 0s;
+        }
+    }
+
+    .form_btn {
+        color: $black;
+        font-family: "Neue Haas Grotesk Display Pro";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 120%;
+        padding: 18px;
+        text-transform: uppercase;
+        width: 165px;
+        border: none;
+        margin-top: 30px;
+        border: 1px solid $white;
+        transition: all .3s ease 0s;
+
+        @include media('>fullscreen') {
+            font-size: 2vw;
+            width: 12vw;
+            height: 5vw;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $white;
+            transition: all .3s ease 0s;
+        }
+
+        @include media('<phone') {
+            width: 100%;
+        }
+    }
+
+    .contact_img {
+        width: 53%;
+
+        @include media('<desktop') {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.about_us {
+
+    .title {
+        color: $white;
+        font-family: "Neue Haas Grotesk Display Pro";
+        @include adaptive-value("font-size", 48, 36, 1);
+        font-weight: 500;
+        line-height: 100%;
+        text-transform: uppercase;
+
+        @include media('>fullscreen') {
+            font-size: 3vw;
+        }
+
+        .font {
+            text-transform: lowercase;
+            font-size: 62px;
+            @include adaptive-value("font-size", 62, 46, 1);
+
+            @include media('>fullscreen') {
+                font-size: 4vw;
+            }
+        }
+    }
+
+    .first_block {
+        height: 100dvh;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
+        @include adaptive-value("padding-bottom", 88, 26, 1);
+
+        @include media('<tablet') {
+            height: 700px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+            z-index: 1;
+        }
+
+        .title {
+            max-width: 830px;
+            width: 100%;
+            margin: 0 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+
+            @include media('>fullscreen') {
+                max-width: 53%;
+            }
+        }
+
+
+        .stroke_2,
+        .stroke_4 {
+            @include adaptive-value("margin-right", 63, 35, 1);
+        }
+    }
+
+    .first_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .second_block {
+        height: 100dvh;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        @include adaptive-value("padding-top", 20, 120, 1);
+
+        @include media('<desktop') {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .title {
+            max-width: 880px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stroke_2 {
+            @include adaptive-value("margin-left", 160, 10, 1);
+        }
+
+        .stroke_3 {
+            @include adaptive-value("margin-left", 80, 10, 1);
+        }
+    }
+
+    .second_img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 1000px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        z-index: -1;
+
+        @include media('>fullscreen') {
+            max-width: 60vw;
+        }
+
+        @include media('<desktop') {
+            position: static;
+            margin-bottom: 35px;
+        }
+    }
+
+    .third_block {
+        @include adaptive-value("padding-top", 250, 120, 1);
+        @include adaptive-value("padding-bottom", 150, 60, 1);
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .title {
+            @include adaptive-value("font-size", 20, 16, 1);
+            max-width: 519px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 120%;
+
+            @include media('>fullscreen') {
+                font-size: 2vw;
+                max-width: 40vw;
+            }
+        }
+    }
+
+    .third_img {
+        max-width: 519px;
+        width: 100%;
+        @include adaptive-value("height", 519, 335, 1);
+        @include adaptive-value("margin-bottom", 40, 20, 1);
+
+        @include media('>fullscreen') {
+            max-width: 40vw;
+            height: auto;
+        }
+    }
+
+    .fourth_block {
+        position: relative;
+        @include adaptive-value("padding-bottom", 250, 50, 1);
+
+        .title {
+            @include adaptive-value("font-size", 104, 48, 1);
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            @include media('>fullscreen') {
+                font-size: 7vw;
+            }
+
+            .font {
+                @include adaptive-value("font-size", 120, 52, 1);
+
+                @include media('>fullscreen') {
+                    font-size: 8vw;
+                }
+            }
+        }
+
+        .stroke_3 {
+            @include adaptive-value("text-indent", 300, 20, 1);
+        }
+
+        .stroke_5 {
+            @include adaptive-value("text-indent", 150, 20, 1);
+        }
+
+        .fourth_img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 625px;
+            width: 100%;
+            z-index: -1;
+
+            @include media('>fullscreen') {
+                max-width: 42vw;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 10%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+                z-index: 1;
+            }
+
+            @include media('<desktop') {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

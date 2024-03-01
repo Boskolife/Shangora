@@ -1,19 +1,252 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shangora</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./images/favicon.webp" />
+    <link
+      rel="stylesheet"
+      href="node_modules/keen-slider/keen-slider.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+    <script type="module" src="/js/WOW.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test</title>
-  <link rel="stylesheet" href="/styles/main.scss">
-  <script type="module" src="/js/main.ts" defer></script>
-</head>
-
-<body>
-  {{> header }}
-  <main>
-
-  </main>
-</body>
-
+  <body>
+    {{> header }}
+    <main>
+      <section class="main">
+        <div class="container">
+          <div class="content_top">
+            <div class="main_img">
+              <img src="./images/main_img.webp" alt="image not found" />
+            </div>
+            <img
+              class="main_img_phone"
+              src="./images/main_img_phone.webp"
+              alt="image not found"
+            />
+            <div class="top_text_wrap">
+              <p class="top_text stroke_1">The right metal</p>
+              <p class="top_text stroke_2">in the right hands can</p>
+              <p class="top_text stroke_3">change</p>
+              <p class="top_text stroke_4">the world</p>
+            </div>
+            <h1 class="main_title">Shangora</h1>
+          </div>
+          <div class="content_bot">
+            <div class="bot_text_wrap bot_text_1">
+              <h2 class="text_title">Artistry</h2>
+              <p class="text">
+                Shangora's metal sculptures boast unparalleled artistry, crafted
+                with meticulous attention to detail.
+              </p>
+            </div>
+            <div class="bot_text_wrap bot_text_2">
+              <h2 class="text_title">Elegance</h2>
+              <p class="text">
+                Our sculptures are forged from high-quality metals, ensuring
+                longevity and resistance to the elements.
+              </p>
+            </div>
+            <div class="bot_text_wrap bot_text_3">
+              <h2 class="text_title">Inspired Themes</h2>
+              <p class="text">
+                Our collection caters to varied tastes, offering a wide array of
+                options for individuals, businesses, and public spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="catalogue_slider">
+        <div class="top_shadow"></div>
+        <div class="bottom_shadow"></div>
+        <img
+          class="catalogue_bg"
+          src="./images/slider_bg.webp"
+          alt="image not found"
+        />
+        <img
+          class="catalogue_bg_white"
+          src="./images/slider_bg_white.webp"
+          alt="image not found"
+        />
+        <div class="container">
+          <div class="content">
+            <div ref="container" class="keen-slider" id="keen-slider">
+              <div class="keen-slider__slide number-slide1">
+                <div class="card">
+                  <a href="#" class="permalink"></a>
+                  <div class="card_img">
+                    <img src="./images/card_img.webp" alt="image not found" />
+                  </div>
+                  <h3 class="card_title">Composition</h3>
+                  <div class="card_info">
+                    <p class="category">abstraction</p>
+                    <p class="price">$16 000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide number-slide2">
+                <div class="card">
+                  <a href="#" class="permalink"></a>
+                  <div class="card_img">
+                    <img src="./images/card_img.webp" alt="image not found" />
+                  </div>
+                  <h3 class="card_title">Composition</h3>
+                  <div class="card_info">
+                    <p class="category">abstraction</p>
+                    <p class="price">$16 000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide number-slide3">
+                <div class="card">
+                  <a href="#" class="permalink"></a>
+                  <div class="card_img">
+                    <img src="./images/card_img.webp" alt="image not found" />
+                  </div>
+                  <h3 class="card_title">Composition</h3>
+                  <div class="card_info">
+                    <p class="category">abstraction</p>
+                    <p class="price">$16 000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide number-slide4">
+                <div class="card">
+                  <a href="#" class="permalink"></a>
+                  <div class="card_img">
+                    <img src="./images/card_img.webp" alt="image not found" />
+                  </div>
+                  <h3 class="card_title">Composition</h3>
+                  <div class="card_info">
+                    <p class="category">abstraction</p>
+                    <p class="price">$16 000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide number-slide5">
+                <div class="card">
+                  <a href="#" class="permalink"></a>
+                  <div class="card_img">
+                    <img src="./images/card_img.webp" alt="image not found" />
+                  </div>
+                  <h3 class="card_title">Composition</h3>
+                  <div class="card_info">
+                    <p class="category">abstraction</p>
+                    <p class="price">$16 000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="keen-slider__slide number-slide6">
+                <div class="card">
+                  <a href="#" class="permalink"></a>
+                  <div class="card_img">
+                    <img src="./images/card_img.webp" alt="image not found" />
+                  </div>
+                  <h3 class="card_title">Composition</h3>
+                  <div class="card_info">
+                    <p class="category">abstraction</p>
+                    <p class="price">$16 000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="catalogue_btn">
+              <span>Our catalogue</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="shop">
+        <img
+          class="shop_img"
+          src="./images/shop_img.webp"
+          alt="image not found"
+        />
+        <div class="container">
+          <div class="content">
+            <div class="title_wrap">
+              <h2
+                class="title title_1 wow animate__animated animate__slideInLeft"
+                data-wow-duration="2s"
+              >
+                It's not about what <span class="font">the metal</span> can do,
+                it's
+              </h2>
+              <h2
+                class="title title_2 wow animate__animated animate__slideInLeft"
+                data-wow-duration="2.3s"
+              >
+                about what you can do with <span class="font">the metal</span>
+              </h2>
+            </div>
+            <a href="#" class="shop_btn">shop</a>
+          </div>
+        </div>
+        <img
+          class="shop_img_phone"
+          src="./images/shop_img_phone.webp"
+          alt="image not found"
+        />
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="content">
+            <div class="contact_img">
+              <img src="./images/contact_img.webp" alt="image not found" />
+            </div>
+            <div class="form_wrap">
+              <h2 class="form_title">get in touch</h2>
+              <form>
+                <div class="input_wrap">
+                  <label class="name">Name</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your name"
+                  />
+                </div>
+                <div class="input_wrap">
+                  <label class="name">Email</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your email"
+                  />
+                </div>
+                <div class="input_wrap">
+                  <label class="name">Phone</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your phone"
+                  />
+                </div>
+                <div class="input_wrap">
+                  <label class="name">Message</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your message"
+                  />
+                </div>
+                <button class="form_btn">send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
 </html>

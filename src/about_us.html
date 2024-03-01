@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shangora</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./images/favicon.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/js/main.js" defer></script>
+  </head>
+  
+  <body>
+    {{> header }}
+    <main>
+      <section class="about_us">
+        <div class="content">
+          <div class="first_block">
+            <img
+              class="first_img"
+              src="./images/about/img_1.webp"
+              alt="image not found"
+            />
+            <div class="container">
+              <h2 class="title">
+                <span class="stroke_1"> Shangora is a company with </span>
+                <span class="stroke_2">
+                  <span class="font">many years</span> of experience in
+                </span>
+                <span class="stroke_3">
+                  the world of <span class="font">metal</span> and
+                </span>
+                <span class="stroke_4"> in the field of working with it. </span>
+              </h2>
+            </div>
+          </div>
+          <div class="second_block">
+            <img
+              class="second_img"
+              src="./images/about/img_2.webp"
+              alt="image not found"
+            />
+            <div class="container">
+              <h2 class="title">
+                <span class="stroke_1">
+                  We create <span class="font">metal sculptures</span>
+                </span>
+                <span class="stroke_2"> and art objects using </span>
+                <span class="stroke_3"> welding, forging</span>
+                <span class="stroke_4">
+                  and &nbsp;
+                  <span class="font">aesthetic</span> &nbsp; metal processing.
+                </span>
+              </h2>
+            </div>
+          </div>
+          <div class="third_block">
+            <div class="container">
+              <img
+                class="third_img"
+                src="./images/about/img_3.webp"
+                alt="image not found"
+              />
+              <h2 class="title">
+                Our well-equipped workshop and advanced facilities enable us to
+                efficiently produce metal structures of any complexity and
+                volume, ensuring high-quality results delivered promptly.
+              </h2>
+            </div>
+          </div>
+          <div class="fourth_block">
+            <div class="fourth_img">
+              <img src="./images/about/img_4.webp" alt="image not found" />
+            </div>
+            <div class="container">
+              <h1 class="title">
+                <span class="stroke_1">
+                  At <span class="font">Shangora</span>, we are
+                </span>
+                <span class="stroke_2">driven by a profound</span>
+                <span class="stroke_3">appreciation for</span>
+                <span class="stroke_4"
+                  >the artistry of <span class="font">metal</span>
+                </span>
+                <span class="stroke_5">sculpture, where</span>
+                <span class="stroke_6">each creation embodies</span>
+                <span class="stroke_7"
+                  ><span class="font">our dedication</span> to</span
+                >
+                <span class="stroke_8">precision and</span>
+                <span class="stroke_9">creativity.</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="content">
+            <div class="contact_img">
+              <img src="./images/contact_img.webp" alt="image not found" />
+            </div>
+            <div class="form_wrap">
+              <h2 class="form_title">get in touch</h2>
+              <form>
+                <div class="input_wrap">
+                  <label class="name">Name</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your name"
+                  />
+                </div>
+                <div class="input_wrap">
+                  <label class="name">Email</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your email"
+                  />
+                </div>
+                <div class="input_wrap">
+                  <label class="name">Phone</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your phone"
+                  />
+                </div>
+                <div class="input_wrap">
+                  <label class="name">Message</label>
+                  <input
+                    class="input_data"
+                    type="text"
+                    placeholder="Please enter your message"
+                  />
+                </div>
+                <button class="form_btn">send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>
