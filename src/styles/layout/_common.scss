@@ -69,7 +69,7 @@ html {
         @include media('<desktop') {
             height: auto;
             margin-bottom: 85px;
-            padding-top: 120px;
+            padding-top: 50px;
 
             &::before {
                 position: absolute;
