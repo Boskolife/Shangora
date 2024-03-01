@@ -1,7 +1,6 @@
 if (window.innerWidth < 1024) {
   openModal();
 }
-
 if (window.innerWidth > 1024) {
   findHref();
 }
