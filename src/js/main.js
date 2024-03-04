@@ -9,6 +9,7 @@ changeBackground();
 filter();
 openFilter();
 initTabs();
+countCards();
 
 function openModal() {
   const itemClick = document.querySelector('.link');
@@ -208,5 +209,23 @@ function initTabs() {
         }
       });
     }
+  });
+}
+
+function countCards() {
+  document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.item');
+
+    // Проходимся циклом по каждому элементу "item"
+    items.forEach((item, index) => {
+      // Находим все элементы "card" внутри текущего элемента "item"
+      const cards = item.querySelectorAll('.card');
+
+      // Находим все элементы "count" внутри всех элементов "filter_name"
+      const countElements = document.querySelectorAll(`.filter_name .count`);
+
+      // Записываем количество найденных карточек в соответствующие элементы "count"
+      countElements[index].textContent = cards.length;
+    });
   });
 }
