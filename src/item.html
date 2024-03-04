@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shangora</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./images/favicon.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+    <script type="module" src="/js/main.js" defer></script>
+    <script type="module" src="/js/gallery.js" defer></script>
+  </head>
+
+  <body>
+    {{> header }}
+    <main>
+      <section class="item_descr">
+        <div class="container">
+          <div class="content">
+            <div class="slider_wrap">
+              <div id="thumbnails" class="thumbnail">
+                <div class="keen-slider__slide number-slide1">
+                  <img
+                    src="./images/collection/abstraction_1.jpg"
+                    alt="image not found"
+                  />
+                </div>
+                <div class="keen-slider__slide number-slide2">
+                  <img
+                    src="./images/collection/abstraction_2.jpg"
+                    alt="image not found"
+                  />
+                </div>
+                <div class="keen-slider__slide number-slide3">
+                  <img
+                    src="./images/collection/furniture_1.jpg"
+                    alt="image not found"
+                  />
+                </div>
+              </div>
+              <div id="my-keen-gallery" class="keen-slider">
+                <div class="keen-slider__slide number-slide1">
+                  <img
+                    src="./images/collection/abstraction_1.jpg"
+                    alt="image not found"
+                  />
+                </div>
+                <div class="keen-slider__slide number-slide2">
+                  <img
+                    src="./images/collection/abstraction_2.jpg"
+                    alt="image not found"
+                  />
+                </div>
+                <div class="keen-slider__slide number-slide3">
+                  <img
+                    src="./images/collection/furniture_1.jpg"
+                    alt="image not found"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="description">
+              <div class="top_descr">
+                <div class="title_wrap">
+                  <h1 class="title">Abstraction</h1>
+                  <span class="material">Stainess steel</span>
+                </div>
+                <span class="price">$ 6 000</span>
+              </div>
+              <div class="faq_page_content" id="faqTabs">
+                <div class="tab_wrapper">
+                  <div class="tabs">
+                    <div class="tab_title_wrap">
+                      <div class="title_body">
+                        <h4 class="tab_title">Description</h4>
+                        <div class="open_status"></div>
+                      </div>
+                    </div>
+                    <div class="tab_content">
+                      Unique sculpture with a certificate of authenticity.
+                      Careful delivery across Ukraine and around the world.
+                    </div>
+                  </div>
+                  <div class="tabs">
+                    <div class="tab_title_wrap">
+                      <div class="title_body">
+                        <h4 class="tab_title">Sculpture details</h4>
+                        <div class="open_status"></div>
+                      </div>
+                    </div>
+                    <div class="tab_content">
+                      Unique sculpture with a certificate of authenticity.
+                      Careful delivery across Ukraine and around the world.
+                    </div>
+                  </div>
+                  <div class="tabs">
+                    <div class="tab_title_wrap">
+                      <div class="title_body">
+                        <h4 class="tab_title">Dimensions</h4>
+                        <div class="open_status"></div>
+                      </div>
+                    </div>
+                    <div class="tab_content">
+                      Unique sculpture with a certificate of authenticity.
+                      Careful delivery across Ukraine and around the world.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="item_btn">order</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>
