@@ -738,8 +738,8 @@ html {
 
         @include media('>fullscreen') {
             font-size: 1.3vw;
-            width: 12vw;
-            height: 5vw;
+            width: 11vw;
+            height: 4vw;
         }
 
         &:hover {
@@ -1226,7 +1226,7 @@ html {
     .filter_body {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 5px;
         overflow: auto;
 
         &::-webkit-scrollbar {
@@ -1272,7 +1272,7 @@ html {
         }
     }
 
-    .all_filter{
+    .all_filter {
         cursor: pointer;
     }
 
@@ -1400,10 +1400,14 @@ html {
 
     .item {
         display: grid;
-        grid-template: 1fr / repeat(auto-fit, minmax(250px, 1fr));
+        grid-template: 1fr / repeat(auto-fit, minmax(250px, 300px));
         gap: 40px;
         @include adaptive-value("gap", 40, 10, 1);
         @include adaptive-value(" margin-bottom", 40, 10, 1);
+
+        @include media('>1920px') {
+            grid-template: 1fr / repeat(auto-fit, minmax(300px, 410px));
+        }
 
         @include media('<phone') {
             grid-template: 1fr / repeat(auto-fit, minmax(160px, 1fr));
@@ -1418,6 +1422,7 @@ html {
         transition: all .5s ease 0s;
         position: relative;
         text-align: start;
+
 
         @include media('<phone') {
             padding: 0;
@@ -1442,6 +1447,11 @@ html {
         width: 100%;
         margin-bottom: 20px;
         position: relative;
+
+
+        @include media('>fullscreen') {
+            height: 320px;
+        }
 
         img {
             width: 100%;
@@ -1468,6 +1478,11 @@ html {
         @include adaptive-value("margin-bottom", 60, 25, 1);
         flex: 1 1 auto;
         transition: all .5s ease 0s;
+
+        @include media('>fullscreen') {
+            font-size: 1.3vw;
+            margin-bottom: 100px;
+        }
 
         @include media('<phone') {
             padding: 0 8px;
@@ -1496,6 +1511,10 @@ html {
         font-weight: 500;
         text-transform: uppercase;
         transition: all .5s ease 0s;
+
+        @include media('>fullscreen') {
+            font-size: 1.1vw;
+        }
     }
 
     .category {
@@ -1675,7 +1694,7 @@ html {
         text-transform: uppercase;
 
         @include media('>fullscreen') {
-            font-size: 1.5vw;
+            font-size: 1.2vw;
         }
     }
 
